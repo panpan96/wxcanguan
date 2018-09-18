@@ -1,0 +1,11 @@
+server:
+  port: 8086
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://172.16.160.51/wxdiancan?useUnicode=true&characterEncoding=utf-8&useSSL=false
+  jpa:
+    show-sql: true
