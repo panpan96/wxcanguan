@@ -10,6 +10,8 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.math.BigDecimal;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.junit.Assert.*;
 
@@ -35,7 +37,12 @@ public class ProductInfoServiceImplTest {
 
     @Test
     public void findUpAll() {
-        System.out.println("Size:::"+productInfoService.findUpAll().size());
+
+        List<ProductInfo> upAll = productInfoService.findUpAll();
+
+        List<Integer> list = upAll.stream().map(e -> e.getCategoryType()).collect(Collectors.toList());
+
+        System.out.println("Size:::"+list);
     }
 
     @Test
