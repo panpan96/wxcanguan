@@ -1,5 +1,6 @@
 package com.zhoutf.wxcanguan.service;
 
+import com.zhoutf.wxcanguan.dto.CartDto;
 import com.zhoutf.wxcanguan.entity.ProductInfo;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -27,4 +28,10 @@ public interface ProductInfoService {
     Page<ProductInfo> findAll(Pageable pageable);
 
     ProductInfo save(ProductInfo productInfo);
+
+    //加库存
+    void increaseStock(List<CartDto> cartDtoList);
+
+    //减库存
+    void decreaseStock(List<CartDto> cartDtoList);
 }

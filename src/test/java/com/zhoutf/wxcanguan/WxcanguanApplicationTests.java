@@ -15,6 +15,7 @@ public class WxcanguanApplicationTests {
     @Test
     public void contextLoads() {
       //  System.out.println("aaaa:"+config.getA());
+
     }
 
 }
